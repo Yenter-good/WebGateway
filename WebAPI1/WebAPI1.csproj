@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>ab79bb88-e5e8-4c87-ab34-d8616b3ed71c</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\文档\Visual Studio 2019\Project\WebGateway\WebAPI1\WebAPI1.xml</DocumentationFile>
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service.Common\Service.Common.csproj" />
+    <ProjectReference Include="..\WebAPI1_Interface\WebAPI1_Interface.csproj" />
+    <ProjectReference Include="..\WebAPI1_Service\WebAPI1_Service.csproj" />
+  </ItemGroup>
+
+
+</Project>

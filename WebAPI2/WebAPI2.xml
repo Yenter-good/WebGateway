@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebAPI2</name>
+    </assembly>
+    <members>
+        <member name="M:WebAPI2.Controllers.TestController.GetString">
+            <summary>
+            测试2
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

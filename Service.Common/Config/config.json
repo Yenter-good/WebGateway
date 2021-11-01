@@ -1,0 +1,29 @@
+{
+  "Consul": {
+    "Address": "http://192.168.56.101:8500",
+    //"Address": "http://192.168.31.162:8500",
+    "CheckUrl": "/Health/check",
+    "CheckInterval": 10, //检查间隔(单位：秒)
+    "DataCenter": "", //为空则是默认的 dc1
+    "enable": "1", //是否启用  默认是不启用  1启用 其他不启用
+    "ignoreNetwork": ".*Sangfor.*,.*Microsoft.*,.*TAP-Windows.*,.*VMware.*,.*VirtualBox.*,.*vEthernet.*,.*Virtual.*,.*Hyper-V.*" //忽略的网卡,
+  },
+  "MicroserviceCall": {
+    "EnableConsul": "1",
+    "MicroserviceUrls": {
+      "WebAPI1_Interface": {
+        "Address": "192.168.20.101",
+        "Port": "8080"
+      },
+      "WebAPI2_Interface": {
+        "Address": "192.168.20.101",
+        "Port": "8090"
+      }
+    },
+    "MicroserviceMapper": {
+      "WebAPI1_Interface": "WebAPI1",
+      "WebAPI2_Interface": "WebAPI2"
+    }
+  }
+
+}

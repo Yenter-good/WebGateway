@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service.Common\Service.Common.csproj" />
+    <ProjectReference Include="..\WebAPI2_Interface\WebAPI2_Interface.csproj" />
+  </ItemGroup>
+
+</Project>
