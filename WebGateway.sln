@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31727.386
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gateway", "Gateway\Gateway.csproj", "{7EDA2DB2-E7A9-4CD4-B59E-E347675FD2AF}"
 EndProject
@@ -15,13 +15,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test1", "Test1", "{AFDED8B1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test2", "Test2", "{003911A2-0DBB-4CED-85EF-FA3A69BB0DA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI1_Interface", "WebAPI1_Interface\WebAPI1_Interface.csproj", "{CE5B8065-6985-4E85-99F5-0D13E3FC4736}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI1_Interface", "WebAPI1_Interface\WebAPI1_Interface.csproj", "{CE5B8065-6985-4E85-99F5-0D13E3FC4736}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI1_Service", "WebAPI1_Service\WebAPI1_Service.csproj", "{31CFFD79-3476-4E44-95D2-B8749381E0ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI1_Service", "WebAPI1_Service\WebAPI1_Service.csproj", "{31CFFD79-3476-4E44-95D2-B8749381E0ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI2_Service", "WebAPI2_Service\WebAPI2_Service.csproj", "{D6A392C1-6591-4BC0-B39E-5A6575C47451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI2_Service", "WebAPI2_Service\WebAPI2_Service.csproj", "{D6A392C1-6591-4BC0-B39E-5A6575C47451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI2_Interface", "WebAPI2_Interface\WebAPI2_Interface.csproj", "{ECF00EA8-9780-4ADD-8762-B47038C16204}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI2_Interface", "WebAPI2_Interface\WebAPI2_Interface.csproj", "{ECF00EA8-9780-4ADD-8762-B47038C16204}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketCommon", "Socket.Common\SocketCommon.csproj", "{537186AE-70AA-4B95-A55E-87BE325C772C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{ECF00EA8-9780-4ADD-8762-B47038C16204}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECF00EA8-9780-4ADD-8762-B47038C16204}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECF00EA8-9780-4ADD-8762-B47038C16204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537186AE-70AA-4B95-A55E-87BE325C772C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537186AE-70AA-4B95-A55E-87BE325C772C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537186AE-70AA-4B95-A55E-87BE325C772C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537186AE-70AA-4B95-A55E-87BE325C772C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

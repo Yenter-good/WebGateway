@@ -30,4 +30,8 @@
     <Folder Include="Auth\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Socket.Common\SocketCommon.csproj" />
+  </ItemGroup>
+
 </Project>
