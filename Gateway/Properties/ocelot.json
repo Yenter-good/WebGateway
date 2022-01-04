@@ -3,7 +3,7 @@
     {
       //Upstream表示上游请求，即客户端请求到API Gateway的请求
       "UpstreamPathTemplate": "/WebAPI1/{url}", //请求路径模板
-      "UpstreamHttpMethod": [ "Get" ], //请求方法数组
+      "UpstreamHttpMethod": [ "Get", "Post" ], //请求方法数组
 
       "UseServiceDiscovery": true, //启用服务发现
 
@@ -33,34 +33,6 @@
     },
     {
       //Upstream表示上游请求，即客户端请求到API Gateway的请求
-      "UpstreamPathTemplate": "/WebAPI1/{url}", //请求路径模板
-      "UpstreamHttpMethod": [ "Post" ], //请求方法数组
-
-      "UseServiceDiscovery": true, //启用服务发现
-
-      //Downstream表示下游请求，即API Gateway转发的目标服务地址
-      "DownstreamPathTemplate": "/api/{url}", //下游请求地址模板
-      "DownstreamScheme": "http", //请求协议，目前应该是支持http和https
-      //指定单个转发地址
-      //"DownstreamHostAndPorts": [ //请求服务地址
-      //  {
-      //    "Host": "localhost",
-      //    "Port": 5011
-      //  }
-      //]
-      "LoadBalancerOptions": { //使用轮询方式
-        "Type": "RoundRobin"
-      },
-      "SwaggerKey": "WebAPI1",
-      "ServiceName": "WebAPI1",
-      "QoSOptions": {
-        "ExceptionsAllowedBeforeBreaking": 3, //允许多少个异常请求
-        "DurationOfBreak": 50000, // 熔断的时间，单位为ms
-        "TimeoutValue": 1000 //如果下游请求的处理时间超过多少则自如将请求设置为超时 默认90秒
-      }
-    },
-    {
-      //Upstream表示上游请求，即客户端请求到API Gateway的请求
       "UpstreamPathTemplate": "/WebAPI2/{url}", //请求路径模板
       "UpstreamHttpMethod": [ "Get", "Post" ], //请求方法数组
 
@@ -81,19 +53,19 @@
       },
       "SwaggerKey": "WebAPI2",
       "ServiceName": "WebAPI2",
-      "QoSOptions": {
-        "ExceptionsAllowedBeforeBreaking": 3, //允许多少个异常请求
-        "DurationOfBreak": 50000, // 熔断的时间，单位为ms
-        "TimeoutValue": 1000 //如果下游请求的处理时间超过多少则自如将请求设置为超时 默认90秒
-      }
+      //"QoSOptions": {
+      //  "ExceptionsAllowedBeforeBreaking": 3, //允许多少个异常请求
+      //  "DurationOfBreak": 50000, // 熔断的时间，单位为ms
+      //  "TimeoutValue": 1000 //如果下游请求的处理时间超过多少则自如将请求设置为超时 默认90秒
+      //}
     }
   ],
   "GlobalConfiguration": {
     "ServiceDiscoveryProvider": {
-      "Host": "192.168.56.101",
+      "Host": "192.168.20.101",
       "Port": 8500,
       "Type": "PollConsul",
       "PollingInterval": 100
     }
-  },
+  }
 }

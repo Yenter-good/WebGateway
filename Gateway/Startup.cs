@@ -32,13 +32,19 @@ namespace Gateway
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddConfiguration(Configuration.GetSection("Logging"));
+                loggingBuilder.AddConsole();
+                loggingBuilder.AddDebug();
+            });
             services.AddControllers();
             services.AddOcelot().AddConsul().AddPolly();
             services.AddHttpClient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHttpClientFactory client)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IHttpClientFactory client, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -57,6 +63,7 @@ namespace Gateway
             });
 
             app.UseHTTPClient(client);
+
             app.UseOcelot().Wait();
         }
     }

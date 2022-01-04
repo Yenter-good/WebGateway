@@ -22,8 +22,13 @@ namespace Service.Common
                      Description = ConfigHelper.Instance["APIInfo:Desc"]
                  });
                  var basePath = PlatformServices.Default.Application.ApplicationBasePath;
-                 var xmlFile = $"{Assembly.GetEntryAssembly().GetName().Name}.xml";
-                 p.IncludeXmlComments(xmlFile);
+                 //var xmlFile = $"{Assembly.GetEntryAssembly().GetName().Name}.xml";
+                 //p.IncludeXmlComments(xmlFile);
+
+                 string[] files = Directory.GetFiles(basePath, "*.xml", SearchOption.TopDirectoryOnly);
+                 foreach (var file in files)
+                     p.IncludeXmlComments(file, true);
+
                  p.DocumentFilter<SwaggerHideFilter>();
              });
         }
